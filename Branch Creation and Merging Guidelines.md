@@ -15,11 +15,11 @@
   2. **Branch Version:** Ensure the branch name reflects the version of `master/main` the feature targets.
 
 - **Example Command:**
-```bash
-git checkout develop
-git pull origin develop
-git checkout -b feature/new-dashboard-v2.0.2
-```
+  ```bash
+  git checkout develop
+  git pull origin develop
+  git checkout -b feature/new-dashboard-v2.0.2
+  ```
 
 #### 2. Bug Branch
 
@@ -32,11 +32,11 @@ git checkout -b feature/new-dashboard-v2.0.2
   2. **Branch Version:** Ensure the branch name reflects the version of `master/main` the bug fix targets.
 
 - **Example Command:**
-```bash
-git checkout develop
-git pull origin develop
-git checkout -b bug/fix-login-error-v2.0.2
-```
+  ```bash
+  git checkout develop
+  git pull origin develop
+  git checkout -b bug/fix-login-error-v2.0.2
+  ```
 #### 3. Develop Branch
 
 - **Purpose:** Integration branch for all features and bug fixes before merging into `master/main`.
@@ -47,11 +47,11 @@ git checkout -b bug/fix-login-error-v2.0.2
   1. **Branch from Master/Main:** Create develop branch from the latest `master/main`.
  
 - **Example Command:**
-```bash
-git checkout master
-git pull origin master
-git checkout -b develop
-```
+  ```bash
+  git checkout master
+  git pull origin master
+  git checkout -b develop
+  ```
 
 ## 2. Branch Merging
 
@@ -59,144 +59,144 @@ git checkout -b develop
 
 - **Purpose:** Integrate bug fixes into the development branch.
 - **Merge Commit Comment Format:**
-```vbnet
-<Develop Branch Version>
-Bug Branch Merged - <Branch Name>
-- List of fixed bugs
-```
+  ```vbnet
+  <Develop Branch Version>
+  Bug Branch Merged - <Branch Name>
+  - List of fixed bugs
+  ```
 - **Example:**
-```vbnet
-2.0.2-dev-0.1.0
-Bug Branch Merged - bug/fix-login-error-v2.0.2
-- Fixed login error on user authentication
-- Resolved session timeout issue
-```
+  ```vbnet
+  2.0.2-dev-0.1.0
+  Bug Branch Merged - bug/fix-login-error-v2.0.2
+  - Fixed login error on user authentication
+  - Resolved session timeout issue
+  ```
 - **Merge Steps:**
   1. **Checkout Develop:** Ensure you are on the `develop` branch.
   2. **Merge Bug Branch:** Merge the bug branch into `develop`.
   3. **Add Merge Message:**
-```bash
-git checkout develop
-git pull origin develop
-git merge bug/fix-login-error-v2.0.2
-git push origin develop
-```
-When prompted, enter the multiline commit message:
-```vbnet
-2.0.2-dev-0.1.0
-Bug Branch Merged - bug/fix-login-error-v2.0.2
-- Fixed login error on user authentication
-- Resolved session timeout issue
-```
+  ```bash
+  git checkout develop
+  git pull origin develop
+  git merge bug/fix-login-error-v2.0.2
+  git push origin develop
+  ```
+  When prompted, enter the multiline commit message:
+  ```vbnet
+  2.0.2-dev-0.1.0
+  Bug Branch Merged - bug/fix-login-error-v2.0.2
+  - Fixed login error on user authentication
+  - Resolved session timeout issue
+  ```
 
 ### 2.2 Merging Feature Branches into Develop
 
 - **Purpose:** Integrate new features into the development branch.
 - **Merge Commit Comment Format:**
-```vbnet
-<Develop Branch Version>
-Feature Branch Merged - <Branch Name>
-- List of added features
-```
+  ```vbnet
+  <Develop Branch Version>
+  Feature Branch Merged - <Branch Name>
+  - List of added features
+  ```
 - **Example:**
-```vbnet
-2.0.2-dev-1.1.0
-Feature Branch Merged - feature/new-dashboard-v2.0.2
-- Added new dashboard feature
-- Enhanced user interface with widgets
-```
+  ```vbnet
+  2.0.2-dev-1.1.0
+  Feature Branch Merged - feature/new-dashboard-v2.0.2
+  - Added new dashboard feature
+  - Enhanced user interface with widgets
+  ```
 - **Merge Steps:**
   1. **Checkout Develop:** Ensure you are on the `develop` branch.
   2. **Merge Feature Branch:** Merge the feature branch into `develop`.
   3. **Add Merge Message:**
-```bash
-git checkout develop
-git pull origin develop
-git merge feature/new-dashboard-v2.0.2
-git push origin develop
-```
-When prompted, enter the multiline commit message:
-```vbnet
-2.0.2-dev-1.1.0
-Feature Branch Merged - feature/new-dashboard-v2.0.2
-- Added new dashboard feature
-- Enhanced user interface with widgets
-```
+  ```bash
+  git checkout develop
+  git pull origin develop
+  git merge feature/new-dashboard-v2.0.2
+  git push origin develop
+  ```
+  When prompted, enter the multiline commit message:
+  ```vbnet
+  2.0.2-dev-1.1.0
+  Feature Branch Merged - feature/new-dashboard-v2.0.2
+  - Added new dashboard feature
+  - Enhanced user interface with widgets
+  ```
 
 ### 2.3 Merging Develop into Master/Main
 
 - **Purpose:** Integrate all features and bug fixes into the production-ready branch.
 - **Merge Commit Comment Format:**
-```vbnet
-<Master/Main Branch Version>
-Develop Branch Merged - <Branch Name>
-Features:
-- List of added features
-Bugs:
-- List of fixed bugs
-```
+  ```vbnet
+  <Master/Main Branch Version>
+  Develop Branch Merged - <Branch Name>
+  Features:
+  - List of added features
+  Bugs:
+  - List of fixed bugs
+  ```
 - **Example:**
-```vbnet
-2.1.0
-Develop Branch Merged - develop-2.0.2-dev-1.1.0
-Features:
-- Added new dashboard feature
-- Enhanced user interface with widgets
-Bugs:
-- Fixed login error on user authentication
-- Resolved session timeout issue
-```
+  ```vbnet
+  2.1.0
+  Develop Branch Merged - develop-2.0.2-dev-1.1.0
+  Features:
+  - Added new dashboard feature
+  - Enhanced user interface with widgets
+  Bugs:
+  - Fixed login error on user authentication
+  - Resolved session timeout issue
+  ```
 - **Merge Steps:**
   1. **Checkout Master/Main:** Ensure you are on the `master/main` branch.
   2. **Merge Develop Branch:** Merge the `develop` branch into `master/main`.
   3. **Create Tag and Release:**
-```bash
-git checkout master
-git pull origin master
-git merge develop
-git tag -a v2.1.0 -m "Release version 2.1.0"
-git push origin master --tags
-```
-When prompted, enter the multiline commit message:
-```vbnet
-2.1.0
-Develop Branch Merged - develop-2.0.2-dev-1.1.0
-Features:
-- Added new dashboard feature
-- Enhanced user interface with widgets
-Bugs:
-- Fixed login error on user authentication
-- Resolved session timeout issue
-```
+  ```bash
+  git checkout master
+  git pull origin master
+  git merge develop
+  git tag -a v2.1.0 -m "Release version 2.1.0"
+  git push origin master --tags
+  ```
+  When prompted, enter the multiline commit message:
+  ```vbnet
+  2.1.0
+  Develop Branch Merged - develop-2.0.2-dev-1.1.0
+  Features:
+  - Added new dashboard feature
+  - Enhanced user interface with widgets
+  Bugs:
+  - Fixed login error on user authentication
+  - Resolved session timeout issue
+  ```
 
 ### 2.4 Merging Master/Main into Develop
 
 - **Purpose:** Keep the `develop` branch up-to-date with changes from `master/main`.
 - **Merge Commit Comment Format:**
-```vbnet
-<Develop Branch Version>
-Develop Branch <Branch Name> synced with Master/Main Branch <Version>
-```
+  ```vbnet
+  <Develop Branch Version>
+  Develop Branch <Branch Name> synced with Master/Main Branch <Version>
+  ```
 - **Example:**
-```vbnet
-2.0.3-dev-0.0.0
-Develop Branch 2.0.3-dev-0.0.0 synced with Master/Main Branch 2.0.3
-```
+  ```vbnet
+  2.0.3-dev-0.0.0
+  Develop Branch 2.0.3-dev-0.0.0 synced with Master/Main Branch 2.0.3
+  ```
 - **Merge Steps:**
   1. **Checkout Develop:** Ensure you are on the `develop` branch.
   2. **Merge Master/Main Branch:** Merge the `master/main` branch into `develop`.
   3. **Push Changes:**
-```bash
-git checkout develop
-git pull origin develop
-git merge master
-git push origin develop
-```
-When prompted, enter the multiline commit message:
-```vbnet
-2.0.3-dev-0.0.0
-Develop Branch 2.0.3-dev-0.0.0 synced with Master/Main Branch 2.0.3
-```
+  ```bash
+  git checkout develop
+  git pull origin develop
+  git merge master
+  git push origin develop
+  ```
+  When prompted, enter the multiline commit message:
+  ```vbnet
+  2.0.3-dev-0.0.0
+  Develop Branch 2.0.3-dev-0.0.0 synced with Master/Main Branch 2.0.3
+  ```
 
 ## 3. Tag Creation and Release Notes
 
