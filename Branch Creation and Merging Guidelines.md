@@ -88,3 +88,84 @@ Bug Branch Merged - bug/fix-login-error-v2.0.2
 - Fixed login error on user authentication
 - Resolved session timeout issue
 ```
+
+### 2.2 Merging Feature Branches into Develop
+
+- **Purpose:** Integrate new features into the development branch.
+- **Merge Commit Comment Format:**
+```
+<Develop Branch Version>
+Feature Branch Merged - <Branch Name>
+- List of added features
+```
+- **Example:**
+```
+2.0.2-dev-1.1.0
+Feature Branch Merged - feature/new-dashboard-v2.0.2
+- Added new dashboard feature
+- Enhanced user interface with widgets
+```
+- **Merge Steps:**
+  1. **Checkout Develop:** Ensure you are on the `develop` branch.
+  2. **Merge Feature Branch:** Merge the feature branch into `develop`.
+  3. **Add Merge Message:**
+```bash
+git checkout develop
+git pull origin develop
+git merge feature/new-dashboard-v2.0.2
+git push origin develop
+```
+When prompted, enter the multiline commit message:
+```
+2.0.2-dev-1.1.0
+Feature Branch Merged - feature/new-dashboard-v2.0.2
+- Added new dashboard feature
+- Enhanced user interface with widgets
+```
+
+### 2.3 Merging Develop into Master/Main
+
+- **Purpose:** Integrate all features and bug fixes into the production-ready branch.
+- **Merge Commit Comment Format:**
+```
+<Master/Main Branch Version>
+Develop Branch Merged - <Branch Name>
+Features:
+- List of added features
+Bugs:
+- List of fixed bugs
+```
+- **Example:**
+```vbnet
+2.1.0
+Develop Branch Merged - develop-2.0.2-dev-1.1.0
+Features:
+- Added new dashboard feature
+- Enhanced user interface with widgets
+Bugs:
+- Fixed login error on user authentication
+- Resolved session timeout issue
+```
+- **Merge Steps:**
+  1. **Checkout Master/Main:** Ensure you are on the `master/main` branch.
+  2. **Merge Develop Branch:** Merge the develop branch into `master/main`.
+  3. **Create Tag and Release:**
+```bash
+git checkout master
+git pull origin master
+git merge develop
+git tag -a v2.1.0 -m "Release version 2.1.0"
+git push origin master --tags
+```
+When prompted, enter the multiline commit message:
+```vbnet
+2.1.0
+Develop Branch Merged - develop-2.0.2-dev-1.1.0
+Features:
+- Added new dashboard feature
+- Enhanced user interface with widgets
+Bugs:
+- Fixed login error on user authentication
+- Resolved session timeout issue
+```
+
