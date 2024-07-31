@@ -11,8 +11,8 @@
 - **Example:** `feature/new-dashboard-v2.0.2`
 
 - **Creation Steps:**
-  - 1. **Branch from Develop:** Create the feature branch from the latest develop branch.
-  - 2. **Branch Version:** Ensure the branch name reflects the version of master/main the feature targets.
+  1. **Branch from Develop:** Create the feature branch from the latest develop branch.
+  2. **Branch Version:** Ensure the branch name reflects the version of master/main the feature targets.
 
 - **Example Command:**
 ```bash
