@@ -53,3 +53,38 @@ git pull origin master
 git checkout -b develop
 ```
 
+## 2. Branch Merging
+
+### 2.1 Merging Bug Branches into Develop
+
+- **Purpose:** Integrate bug fixes into the development branch.
+- **Merge Commit Comment Format:**
+```
+<Develop Branch Version>
+Bug Branch Merged - <Branch Name>
+- List of fixed bugs
+```
+- **Example:**
+```
+2.0.2-dev-0.1.0
+Bug Branch Merged - bug/fix-login-error-v2.0.2
+- Fixed login error on user authentication
+- Resolved session timeout issue
+```
+- **Merge Steps:**
+  1. **Checkout Develop:** Ensure you are on the `develop` branch.
+  2. **Merge Bug Branch:** Merge the bug branch into `develop`.
+  3. **Add Merge Message:**
+```bash
+git checkout develop
+git pull origin develop
+git merge bug/fix-login-error-v2.0.2
+git push origin develop
+```
+When prompted, enter the multiline commit message:
+```
+2.0.2-dev-0.1.0
+Bug Branch Merged - bug/fix-login-error-v2.0.2
+- Fixed login error on user authentication
+- Resolved session timeout issue
+```
