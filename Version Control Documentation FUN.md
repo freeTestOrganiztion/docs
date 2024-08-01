@@ -214,5 +214,84 @@ This section provides guidelines on managing feature and bug branches. It ensure
   - **Purpose:** Fixing a header issue in version `2.0.2` of `master/main`.
 
 These examples help illustrate the naming conventions and how branches are tied to specific versions of `master/main`.
+</details>
+
+
+<details>
+<summary><h2>🛠️ Workflow and Version Handling</h2></summary>
+
+This section outlines the workflow for managing branches and handling version updates. Following these steps ensures a smooth development process and consistent releases.
+
+## 5.1 Workflow
+
+### Workflow Overview
+
+**Steps for Managing Your Code:**
+
+- **Create Branches:**
+  - **Feature Branches:** Created from the `develop` branch for new features.
+  - **Bug Branches:** Created from the `develop` branch for bug fixes.
+  - **Naming Convention:** Include the version of the `master/main` branch the branch targets (e.g., `feature/new-dashboard-v2.0.2`).
+
+- **Develop Code:**
+  - Work on the feature or bug fix in the respective branch.
+  - Ensure adherence to coding guidelines and perform thorough testing.
+
+- **Merge to Develop:**
+  - After successful testing, merge the feature or bug branch into the `develop` branch.
+  - Make sure `develop` reflects these changes by updating the version as needed.
+
+- **Test Develop Branch:**
+  - Conduct comprehensive testing on the `develop` branch.
+  - Update the version of `develop` using the `FEATURE.BUG.ITERATION` suffix to reflect progress.
+
+- **Merge to Master/Main:**
+  - Once the `develop` branch is stable and ready for production, merge it into `master/main`.
+  - Increment the `master/main` version according to the changes made (MAJOR, MINOR, PATCH).
+
+- **Tag and Release:**
+  - Tag the release on the `master/main` branch with the updated version number.
+  - Create detailed release notes including changes, compatibility, and deployment information.
+
+## 5.2 Versioning and Version Control Handling
+
+### Versioning and Control Guidelines
+
+**Managing Versions and Releases:**
+
+- **Feature and Bug Fixes:**
+  - Ensure the version number of feature and bug branches aligns with the `master/main` version they target.
+    - **Example:** If `master/main` is at `2.0.2`, a feature branch should be named `feature/feature-name-v2.0.2`.
+
+- **Develop Branch Versions:**
+  - The `develop` branch should include an additional suffix to indicate its development status (e.g., `2.0.2-dev-1.1.1`).
+  - Update the `develop` version as new features or bug fixes are integrated, reflecting the current state of development.
+
+- **Release Management:**
+  - Each release from `master/main` should be tagged and documented comprehensively.
+  - Maintain a clear history of changes and version increments to facilitate potential rollbacks.
+
+## Example Workflow
+
+### Workflow Examples
+
+**Here’s how you might follow the workflow:**
+
+- **Create Feature Branch:**
+  - **Branch Name:** `feature/new-dashboard-v2.0.2`
+  - **Description:** Develop a new dashboard feature for `master/main` version `2.0.2`.
+
+- **Merge Feature Branch:**
+  - After merging `feature/new-dashboard-v2.0.2` into `develop`, update `develop` to `2.0.2-dev-1.0.0` if this is the first feature branch merged.
+
+- **Prepare for Release:**
+  - Ensure `develop` is stable and incorporates all planned features and fixes.
+
+- **Merge into Master/Main:**
+  - **Tag Version:** `v2.1.0` if significant new features were included.
+  - **Release:** Document changes and deploy the new version.
+
+These examples illustrate how to manage branches, integrate changes, and prepare for releases effectively.
 
 </details>
+
