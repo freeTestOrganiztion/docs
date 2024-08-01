@@ -67,3 +67,50 @@ master/main -> 2.1.0
 - **Updates:** `develop` progresses to `2.0.0-dev-1.1.0` as changes are integrated, and `master/main` is updated to `2.1.0`.
 This structure ensures smooth integration of new features and bug fixes, leading to stable releases.
 </details>
+
+<details>
+<summary><h2>📋 Document for Master/Main </h2></summary>
+
+This section outlines how we manage versioning and updates for our `master/main` branch. Understanding these guidelines helps ensure that our releases are consistent and well-documented.
+
+## 2.1 Versioning Scheme
+
+### Versioning Scheme for `master/main`
+
+- **Semantic Versioning (SEMVER):** We use the format `MAJOR.MINOR.PATCH` for our releases.
+  - **MAJOR:** Represents significant changes that break backward compatibility.
+  - **MINOR:** Indicates backward-compatible new features or enhancements.
+  - **PATCH:** Denotes small bug fixes or minor improvements that are backward-compatible.
+
+## 2.2 Rules for Versioning
+
+### Versioning Rules
+
+**How to Increment Versions:**
+
+- **MAJOR Version Increment:**
+  - Triggered by breaking changes or major updates.
+  - **Example:** Updating from `1.0.0` to `2.0.0` might involve a complete redesign of the application.
+
+- **MINOR Version Increment:**
+  - Applied when new features are added that do not break backward compatibility.
+  - **Example:** Moving from `2.0.0` to `2.1.0` could introduce new functionality such as a new payment gateway.
+
+- **PATCH Version Increment:**
+  - Used for backward-compatible bug fixes or minor tweaks.
+  - **Example:** Changing from `2.1.0` to `2.1.1` may fix a minor issue like a small UI glitch.
+
+## 2.3 Examples
+
+### Versioning Examples
+
+**Here’s how different versions look:**
+
+- **Version 1.0.0:** The initial release featuring core functionalities.
+- **Version 1.1.0:** Introduced additional reporting features.
+- **Version 1.1.1:** Addressed minor bugs related to user settings.
+- **Version 2.0.0:** Marked a major overhaul of the user interface and core features.
+
+These examples illustrate how our version numbers reflect the nature and scale of changes in each release.
+
+</details>
