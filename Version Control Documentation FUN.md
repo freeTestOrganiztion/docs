@@ -3,7 +3,7 @@
 Welcome to the **Version Control Documentation**! This guide will walk you through our branching strategy, versioning schemes, and workflows. Ready to dive in? Let's get started!
 
 <details>
-<summary><h2>🛠️ Detailed Branching Strategy</h2></summary>
+<summary><h2>🔀 Detailed Branching Strategy</h2></summary>
 
 Here’s a clear guide to understanding our branching strategy. This section outlines the different types of branches we use and how they work together.
 
@@ -69,7 +69,7 @@ This structure ensures smooth integration of new features and bug fixes, leading
 </details>
 
 <details>
-<summary><h2>📋 Document for Master/Main </h2></summary>
+<summary><h2>📦 Document for Master/Main </h2></summary>
 
 This section outlines how we manage versioning and updates for our `master/main` branch. Understanding these guidelines helps ensure that our releases are consistent and well-documented.
 
@@ -116,7 +116,7 @@ These examples illustrate how our version numbers reflect the nature and scale o
 </details>
 
 <details>
-<summary><h2>📋 Document for Develop</h2></summary>
+<summary><h2>🚀 Document for Develop</h2></summary>
 
 This section covers how we handle versioning and updates for the `develop` branch. It’s essential for keeping track of ongoing development and ensuring a smooth transition to the `master/main` branch.
 
@@ -172,7 +172,7 @@ These examples illustrate how development progress is tracked and reflected in v
 </details>
 
 <details>
-<summary><h2>📋 Document for Bug/Feature Branches</h2></summary>
+<summary><h2>🔨 Document for Bug/Feature Branches</h2></summary>
 
 This section provides guidelines on managing feature and bug branches. It ensures that new features and bug fixes are tracked properly and integrated efficiently.
 
@@ -218,7 +218,7 @@ These examples help illustrate the naming conventions and how branches are tied 
 
 
 <details>
-<summary><h2>🛠️ Workflow and Version Handling</h2></summary>
+<summary><h2>🔄 Workflow and Version Handling</h2></summary>
 
 This section outlines the workflow for managing branches and handling version updates. Following these steps ensures a smooth development process and consistent releases.
 
