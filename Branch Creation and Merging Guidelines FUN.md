@@ -209,6 +209,8 @@
 <details>
 <summary><h2>3. Tag Creation and Release Notes 🏷️</h2></summary>
 
+When the `develop` branch is merged into the `master/main` branch, a new tag should be created, and release notes should be generated to document the changes.
+
 ## 3.1 Release Tag Format 📍
 
 - **Tag Name:** Use the format `vMAJOR.MINOR.PATCH` for clear versioning.
