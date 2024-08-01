@@ -205,3 +205,88 @@
   ```
 
 </details>
+
+<details>
+<summary><h2>3. Tag Creation and Release Notes 🏷️</h2></summary>
+
+## 3.1 Release Tag Format 📍
+
+- **Tag Name:** Use the format `vMAJOR.MINOR.PATCH` for clear versioning.
+- **Example Tag:** `v2.1.0`
+
+## 3.2 Release Notes Structure 📝
+
+- **Title:**
+  ```vbnet
+  Release vMAJOR.MINOR.PATCH - Release Date
+  ```
+- **Body:**
+  ```text
+  ## Overview
+  This release includes the following updates:
+  
+  ## Features
+  - **Feature 1:** Description of the feature.
+  - **Feature 2:** Description of the feature.
+    
+  ## Bug Fixes
+  - **Bug 1:** Description of the bug fix.
+  - **Bug 2:** Description of the bug fix.
+  
+  ## Known Issues
+  - **Issue 1:** Description of known issues or limitations.
+  
+  # Compatibility
+  - **Repository 1:** Version of Repository it works with.
+  - **Repository 2:** Version of Repository it works with.
+  
+  ## Additional Information
+  - **Release Date:** YYYY-MM-DD
+  - **Deployed To:** Indicate whether the release is live on client environments or in staging.
+  - **Release Notes Prepared By:** Your Name or Team
+  ```
+
+## 3.3 Example Release Notes Body 📄
+
+Here’s how the body of the release notes might look when creating a new tag after merging `develop` into `master/main`:
+- **Tag Name:** `v2.1.0`
+- **Release Notes Body:**
+  ```vbnet
+  Release v2.1.0 - 2024-07-30
+  
+  ## Overview
+  This release brings new features, bug fixes, and improvements to enhance the overall functionality and user experience.
+  
+  ## Features
+  - **New Dashboard Feature:** Added a new dashboard with customizable widgets to improve user interaction and data visualization.
+  - **Enhanced User Interface:** Updated the user interface with a more modern design, including improved navigation and responsive elements.
+  
+  ## Bug Fixes
+  - **Login Error Fix:** Resolved a critical login error that prevented users from accessing their accounts.
+  - **Session Timeout Issue:** Fixed an issue where sessions were timing out too quickly, causing inconvenience to users.
+  
+  ## Known Issues
+  - **Mobile Layout Bug:** Minor issues with layout on smaller mobile screens. A fix is planned for the next release.
+  
+  # Compatibility
+  - **Authentication Service:** v2.0.1
+  - **Payment Gateway:** v3.1.4
+  
+  ## Additional Information
+  - **Release Date:** 2024-07-30
+  - **Deployed To:** Production environment; live for all users.
+  - **Release Notes Prepared By:** Release Management Team
+  ```
+
+## 3.4 Command for Creating the Tag and Release 🛠️
+
+- **Create Tag:**
+  ```bash
+  git tag -a v2.1.0 -m "Release v2.1.0 - Includes new features and bug fixes"
+  ```
+- **Push Tag:**
+  ```bash
+  git push origin v2.1.0
+  ```
+
+</details>
