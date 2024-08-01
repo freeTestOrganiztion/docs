@@ -1,10 +1,11 @@
 # Branch Creation and Merging Guidelines
 
-## 1. Branch Creation
+<details>
+<summary><h2>1. Branch Creation</h2></summary>
 
-### 1.1 Branch Types
+## 1.1 Branch Types
 
-#### 1. Feature Branch
+### 1. Feature Branch
 
 - **Purpose:** To develop new features or enhancements.
 - **Naming Convention:** `feature/feature-name-vX.Y.Z`
@@ -21,7 +22,7 @@
   git checkout -b feature/new-dashboard-v2.0.2
   ```
 
-#### 2. Bug Branch
+### 2. Bug Branch
 
 - **Purpose:** To fix specific bugs or issues.
 - **Naming Convention:** `bug/bug-description-vX.Y.Z`
@@ -37,7 +38,7 @@
   git pull origin develop
   git checkout -b bug/fix-login-error-v2.0.2
   ```
-#### 3. Develop Branch
+### 3. Develop Branch
 
 - **Purpose:** Integration branch for all features and bug fixes before merging into `master/main`.
 - **Naming Convention:** Align with the base version of `master/main` with a suffix indicating development progress.
@@ -52,10 +53,12 @@
   git pull origin master
   git checkout -b develop
   ```
+<details>
 
-## 2. Branch Merging
+<details>
+<summary><h2>2. Branch Merging</h2></summary>
 
-### 2.1 Merging Bug Branches into Develop
+## 2.1 Merging Bug Branches into Develop
 
 - **Purpose:** Integrate bug fixes into the development branch.
 - **Merge Commit Comment Format:**
@@ -89,7 +92,7 @@
   - Resolved session timeout issue
   ```
 
-### 2.2 Merging Feature Branches into Develop
+## 2.2 Merging Feature Branches into Develop
 
 - **Purpose:** Integrate new features into the development branch.
 - **Merge Commit Comment Format:**
@@ -123,7 +126,7 @@
   - Enhanced user interface with widgets
   ```
 
-### 2.3 Merging Develop into Master/Main
+## 2.3 Merging Develop into Master/Main
 
 - **Purpose:** Integrate all features and bug fixes into the production-ready branch.
 - **Merge Commit Comment Format:**
@@ -169,7 +172,7 @@
   - Resolved session timeout issue
   ```
 
-### 2.4 Merging Master/Main into Develop
+## 2.4 Merging Master/Main into Develop
 
 - **Purpose:** Keep the `develop` branch up-to-date with changes from `master/main`.
 - **Merge Commit Comment Format:**
@@ -197,16 +200,18 @@
   2.0.3-dev-0.0.0
   Develop Branch 2.0.3-dev-0.0.0 synced with Master/Main Branch 2.0.3
   ```
+</details>
 
-## 3. Tag Creation and Release Notes
+<details>
+<summary><h2>3. Tag Creation and Release Notes</h2></summary>
 
 When the `develop` branch is merged into the `master/main` branch, a new tag should be created, and release notes should be generated to document the changes.
 
-### 3.1 Release Tag Format
+## 3.1 Release Tag Format
 - **Tag Name:** `vMAJOR.MINOR.PATCH`
 - **Example Tag:** `v2.1.0`
 
-### 3.2 Release Notes Structure
+## 3.2 Release Notes Structure
 - **Title:**
   ```vbnet
   Release vMAJOR.MINOR.PATCH - Release Date
@@ -228,7 +233,8 @@ When the `develop` branch is merged into the `master/main` branch, a new tag sho
   - **Issue 1:** Description of known issues or limitations.
 
   # Compatibility
-  - **Repository:** List any other repositories or components this release works with, including their versions.
+  - **Repository 1:** Version of Repository it works with.
+  - **Repository 2:** Version of Repository it works with.
   
   ## Additional Information
   - **Release Date:** YYYY-MM-DD
@@ -236,7 +242,7 @@ When the `develop` branch is merged into the `master/main` branch, a new tag sho
   - **Release Notes Prepared By:** Your Name or Team
   ```
 
-### 3.3 Example Release Notes Body
+## 3.3 Example Release Notes Body
 
 Here’s an example of how the body of the release notes might look when creating a new tag after merging `develop` into `master/main`:
 
@@ -270,7 +276,7 @@ Here’s an example of how the body of the release notes might look when creatin
 
   ```
   
-### 3.4 Command for Creating the Tag and Release
+## 3.4 Command for Creating the Tag and Release
 - **Create Tag;**
   ```bash
   git tag -a v2.1.0 -m "Release v2.1.0 - Includes new features and bug fixes"
@@ -279,3 +285,4 @@ Here’s an example of how the body of the release notes might look when creatin
   ```bash
   git push origin v2.1.0
   ```
+</details>
