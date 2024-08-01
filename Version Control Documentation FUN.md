@@ -171,3 +171,48 @@ These examples illustrate how development progress is tracked and reflected in v
 
 </details>
 
+<details>
+<summary><h2>📋 Document for Bug/Feature Branches</h2></summary>
+
+This section provides guidelines on managing feature and bug branches. It ensures that new features and bug fixes are tracked properly and integrated efficiently.
+
+## 4.1 Versioning Scheme
+
+### Versioning Scheme for Feature/Bug Branches
+
+- **Branch Naming:**
+  - **Feature Branches:** `feature/feature-name-vX.Y.Z`
+    - **Example:** `feature/new-dashboard-v2.0.2`
+  - **Bug Branches:** `bug/bug-description-vX.Y.Z`
+    - **Example:** `bug/fix-login-error-v2.0.2`
+  - **Version Part (vX.Y.Z):** Indicates the version of the `master/main` branch that the branch is targeting.
+
+## 4.2 Rules for Versioning
+
+### Versioning Rules
+
+**Guidelines for Naming Feature and Bug Branches:**
+
+- **Feature Branches:**
+  - **Naming Convention:** Use `feature/feature-name-vX.Y.Z` to specify which version of `master/main` the feature targets.
+    - **Example:** `feature/new-dashboard-v2.0.2` targets version `2.0.2` of `master/main`.
+
+- **Bug Branches:**
+  - **Naming Convention:** Use `bug/bug-description-vX.Y.Z` to denote which version of `master/main` the bug fix is aimed at.
+    - **Example:** `bug/fix-login-error-v2.0.2` targets version `2.0.2` of `master/main`.
+
+## 4.3 Examples
+
+### Branch Examples
+
+**Here’s how feature and bug branches might be named:**
+
+- **Feature Branch Example:** `feature/new-payment-v2.0.2` 
+  - **Purpose:** Adding a new payment feature targeting `master/main` version `2.0.2`.
+
+- **Bug Branch Example:** `bug/fix-header-issue-v2.0.2` 
+  - **Purpose:** Fixing a header issue in version `2.0.2` of `master/main`.
+
+These examples help illustrate the naming conventions and how branches are tied to specific versions of `master/main`.
+
+</details>
