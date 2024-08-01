@@ -114,3 +114,60 @@ This section outlines how we manage versioning and updates for our `master/main`
 These examples illustrate how our version numbers reflect the nature and scale of changes in each release.
 
 </details>
+
+<details>
+<summary><h2>📋 Document for Develop</h2></summary>
+
+This section covers how we handle versioning and updates for the `develop` branch. It’s essential for keeping track of ongoing development and ensuring a smooth transition to the `master/main` branch.
+
+## 3.1 Versioning Scheme
+
+### Versioning Scheme for `develop`
+
+- **Version Format:** `MAJOR.MINOR.PATCH-dev-FEATURE.BUG.ITERATION`
+  - **MAJOR.MINOR.PATCH:** Reflects the base version of the `master/main` branch.
+  - **dev:** Indicates that this version is in development.
+  - **FEATURE:** Tracks the number of feature branches merged.
+  - **BUG:** Tracks the number of bug branches merged.
+  - **ITERATION:** Shows individual development iterations or changes.
+
+## 3.2 Rules for Versioning
+
+### Versioning Rules
+
+**Guidelines for Versioning in `develop`:**
+
+- **Maintain Alignment with Master/Main:**
+  - Ensure the `develop` branch version aligns with the `master/main` version, with an additional suffix to indicate development status.
+  - **Example:** If `master/main` is at `2.0.2`, `develop` might start as `2.0.2-dev-0.0.0`.
+
+- **Version Increment Rules:**
+  - **FEATURE:** Increment this number each time a feature branch is merged into `develop`.
+    - **Example:** `2.0.2-dev-1.0.0` shows 1 feature branch merged.
+  - **BUG:** Increment this number for each bug branch merged.
+    - **Example:** `2.0.2-dev-1.1.0` reflects 1 feature branch and 1 bug fix merged.
+  - **ITERATION:** Increment this for each new iteration or change during development.
+    - **Example:** `2.0.2-dev-1.1.1` indicates 1 feature, 1 bug fix, and 1 iteration.
+
+## 3.3 Examples
+
+### Versioning Examples
+
+**See how the versions evolve:**
+
+- **Develop Branch Version `2.0.2-dev-0.0.0`:**
+  - **Base Version:** `2.0.2`
+  - **Development Status:** No features or bug fixes yet.
+
+- **Develop Branch Version `2.0.2-dev-1.1.0`:**
+  - **Base Version:** `2.0.2`
+  - **Development Status:** 1 feature branch and 1 bug fix merged.
+
+- **Develop Branch Version `2.1.0-dev-2.2.1`:**
+  - **Base Version:** `2.1.0`
+  - **Development Status:** 2 features, 2 bug fixes, and 1 iteration.
+
+These examples illustrate how development progress is tracked and reflected in version numbers.
+
+</details>
+
