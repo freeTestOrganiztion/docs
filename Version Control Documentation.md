@@ -1,6 +1,7 @@
 # Version Control Documentation
 
-## 1. Detailed Branching Strategy
+<details>
+<summary><h2>1. Detailed Branching Strategy</h2></summary>
 
 ### 1.1 Branch Types
 
@@ -40,8 +41,10 @@ develop -> 2.0.0-dev-1.1.0
 master/main -> 2.1.0
 ```
 
+</details>
 
-## 2. Document for Master/Main
+<details>
+<summary><h2>2. Document for Master/Main</h2></summary>
 
 ### 2.1 Versioning Scheme
 
@@ -71,7 +74,10 @@ master/main -> 2.1.0
 - **Version 1.1.1:** Fixed minor bugs related to user settings.
 - **Version 2.0.0:** Major overhaul of the user interface and core features.
 
-## 3. Document for Develop
+</details>
+
+<details>
+<summary><h2>3. Document for Develop</h2></summary>
 
 ### 3.1 Versioning Scheme
 
@@ -110,7 +116,10 @@ master/main -> 2.1.0
   - **Base version:** `2.1.0`
   - **Development progress:** 2 features merged, 2 bug fixes merged, 1 iteration.
 
-## 4. Document for Bug/Feature Branches
+</details>
+
+<details>
+<summary><h2>4. Document for Bug/Feature Branches</h2></summary>
 
 ### 4.1 Versioning Scheme
 
@@ -125,7 +134,7 @@ master/main -> 2.1.0
 
 - **Feature Branches:**
   - **Naming:** Use `feature/feature-name-vX.Y.Z` to denote the version of the `master/main` branch the feature is targeting.
-    - **Example:** `feature/new-dashboard-v2.0.2` targets version 2.0.2 of the `master/main` branch.
+    - **Example:** `feature/new-dashboard-v2.0.2` targets version `2.0.2` of the `master/main` branch.
 
 - **Bug Branches:**
   - **Naming:** Use `bug/bug-description-vX.Y.Z` to indicate the version of the `master/main` branch that the bug fix is targeting.
@@ -136,7 +145,10 @@ master/main -> 2.1.0
 - **Feature Branch Example:** `feature/new-payment-v2.0.2` for adding a new payment feature.
 - **Bug Branch Example:** `bug/fix-header-issue-v2.0.2` for fixing an issue with the header.
 
-## 5. Workflow and Version Handling
+</details>
+
+<details>
+<summary><h2>5. Workflow and Version Handling</h2></summary>
 
 ### 5.1 Workflow
 
@@ -195,3 +207,5 @@ master/main -> 2.1.0
 - **Merge the Develop Branch into Master/Main:**
   - Tag: `v2.1.0` if new features were added.
   - Create release notes and deploy the new version.
+
+</details>
