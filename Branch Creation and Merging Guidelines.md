@@ -53,7 +53,7 @@
   git pull origin master
   git checkout -b develop
   ```
-<details>
+</details>
 
 <details>
 <summary><h2>2. Branch Merging</h2></summary>
