@@ -226,6 +226,9 @@ When the `develop` branch is merged into the `master/main` branch, a new tag sho
   
   ## Known Issues
   - **Issue 1:** Description of known issues or limitations.
+
+  # Compatibility
+  - **Repository:** List any other repositories or components this release works with, including their versions.
   
   ## Additional Information
   - **Release Date:** YYYY-MM-DD
@@ -255,6 +258,10 @@ Here’s an example of how the body of the release notes might look when creatin
   
   ## Known Issues
   - **Mobile Layout Bug:** Minor issues with layout on smaller mobile screens. A fix is planned for the next release.
+
+   # Compatibility
+  - **Authentication Service:** v2.0.1
+  - **Payment Gateway:** v3.1.4
   
   ## Additional Information
   - **Release Date:** 2024-07-30
