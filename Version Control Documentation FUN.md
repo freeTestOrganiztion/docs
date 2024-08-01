@@ -1,9 +1,13 @@
-# 🛠️ Detailed Branching Strategy
+# 🎯 Version Control Documentation
+
+Welcome to the **Version Control Documentation**! This guide will walk you through our branching strategy, versioning schemes, and workflows. Ready to dive in? Let's get started!
+
+<details>
+<summary><h2>🛠️ Detailed Branching Strategy</h2></summary>
 
 Here’s a clear guide to understanding our branching strategy. This section outlines the different types of branches we use and how they work together.
 
-<details>
-<summary><h2>1.1 Branch Types</h2></summary>
+## 1.1 Branch Types
 
 ### Branch Types Overview
 
