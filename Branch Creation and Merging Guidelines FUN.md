@@ -55,7 +55,7 @@
   </details>
 
 <details>
-<summary><h2>2. Branch Merging 🔄</h2></summary>
+<summary><h2>2. Branch Merging 🔀</h2></summary>
 
 ## 2.1 Merging Bug Branches into Develop 🐛
 
