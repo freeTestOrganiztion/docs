@@ -230,6 +230,55 @@ This section provides guidelines on managing feature and bug branches. It ensure
 These examples help illustrate the naming conventions and how branches are tied to specific versions of `master/main`.
 </details>
 
+<details>
+<summary><h2>🚑 Document for Hotfix Branches</h2></summary>
+
+This section covers how we handle versioning and updates for hotfix branches. Hotfix branches are used for urgent fixes to issues in the production environment and are merged directly into the `master/main` branch.
+
+## 5.1 Versioning Scheme
+
+### Versioning Scheme for Hotfix Branches
+
+- **Version Format:** `hotfix/hotfix-description-vX.Y.Z`
+- **hotfix:** Indicates an urgent fix applied to production.
+- **hotfix-description:** A brief description of the hotfix.
+- **vX.Y.Z:** The version of the `master/main` branch being fixed.
+
+## 5.2 Rules for Versioning
+
+### Versioning Rules
+
+**Guidelines for Hotfix Branches:**
+
+- **Creating a Hotfix Branch:**
+  - Hotfix branches are created directly from the `master/main` branch to address critical issues.
+    - **Example:** `hotfix/urgent-security-fix-v2.0.1` indicates a critical security issue that affects version `2.0.1`.
+
+- **Merging Hotfix Branches:**
+  - Once the hotfix is completed and tested, merge the hotfix branch directly into `master/main` and also sync `master/main` into develop to keep the development branch up-to-date.
+    - **Example:** After merging `hotfix/urgent-security-fix-v2.0.1` into `master/main`, update `master/main` to `2.0.2`, and then sync `main/master 2.0.2` into `develop`.
+
+- **Version Increment Rules:**
+  - **PATCH Increment:** Hotfix branches usually result in an increment of the PATCH version on the `master/main` branch.
+    - **Example:** Merging `hotfix/urgent-security-fix-v2.0.1` results in `master/main` version `2.0.2`.
+
+## 5.3 Examples
+
+### Hotfix Examples
+
+**Here’s how hotfix branches might be used:**
+
+- **Hotfix Branch Example:** `hotfix/critical-bug-v2.1.0`
+  - **Purpose:** Fixing a critical bug in version `2.1.0` of `master/main`.
+  - **Outcome:** `master/main` is updated to `2.1.1` after the hotfix is applied.
+
+- **Hotfix Branch Example:** `hotfix/security-patch-v2.0.2`
+  - **Purpose:** Applying a security patch to version `2.0.2` of `master/main`.
+  - **Outcome:** `master/main` is updated to `2.0.3` after the hotfix is applied.
+
+These examples illustrate how hotfix branches are used to quickly address urgent issues and how they affect versioning.
+
+</details>
 
 <details>
 <summary><h2>🔄 Workflow and Version Handling</h2></summary>
