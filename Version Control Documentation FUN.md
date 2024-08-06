@@ -72,7 +72,7 @@ hotfix/fix-payment-gateway-v2.0.0
 master/main -> 2.0.1
       |
       v
-develop -> 2.0.1-dev-0.0.0
+develop -> 2.0.1-dev-1.1.0
 ```
 - **Starting Point:** `master/main` at version `2.0.0`.
 - **Development Stage:** `develop` at `2.0.0-dev-0.0.0`, with feature and bug branches.
