@@ -221,6 +221,39 @@
   Develop Branch 2.0.3-dev-0.0.0 synced with Master/Main Branch 2.0.3
   ```
 
+## 2.5 Merging Hotfix Branches into Master/Main 🚑
+
+- **Purpose:** Quickly fix critical issues! Merge hotfix branches directly into `master/main` to resolve urgent issues in production.
+- **Merge Commit Comment Format:**
+ ```vbnet
+  <Master/Main Branch Version>
+  Hotfix Branch Merged - <Branch Name>
+  - List of applied hotfixes
+  ```
+- **Merge Commit Comment Example :**
+  ```vbnet
+  2.0.3
+  Hotfix Branch Merged - hotfix/fix-payment-gateway-v2.0.2
+  - Fixed payment gateway issue causing transaction failures
+  ```
+- **Merge Steps:**
+  1. **Checkout Master/Main:** Switch to the `master/main` branch for the merge.
+  2. **Merge Hotfix Branch:** Integrate changes from the hotfix branch into `master/main`.
+  3. **Push Changes:** Update the remote `master/main` branch.
+  4. **Create Tag and Release**: Tag the release version and push changes.
+- **Merge Commands:**
+  ```bash
+  git checkout master
+  git pull origin master
+  git merge hotfix/fix-payment-gateway-v2.0.2
+  git push origin master
+  ```
+  When prompted, enter the multiline commit message:
+  ```vbnet
+  2.0.3
+  Hotfix Branch Merged - hotfix/fix-payment-gateway-v2.0.2
+  - Fixed payment gateway issue causing transaction failures
+  ```
 </details>
 
 <details>
