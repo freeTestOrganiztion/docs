@@ -38,7 +38,7 @@
   git checkout -b bug/fix-login-error-v2.0.2
   ```
 
-  ### 3. Develop Branch 🔄
+### 3. Develop Branch 🔄
 - **Purpose:** The integration hub! The `develop` branch is where all features and bug fixes come together before hitting `master/main`.
 - **Naming Convention:** Align with the base version of `master/main` with a suffix indicating development progress.
 - **Example:** `2.0.2-dev-0.0.0` for starting development from `2.0.2`.
@@ -52,7 +52,24 @@
   git pull origin master
   git checkout -b develop
   ```
-  </details>
+
+### 4. Hotfix Branch 🚑
+- **Purpose:** Immediate fix! Use hotfix branches to quickly address critical issues in the production environment that need urgent resolution.
+- **Naming Convention:** `hotfix/issue-description-vX.Y.Z`
+- **Example:** `hotfix/fix-payment-gateway-v2.0.2`.
+  
+- **Creation Steps:**
+  1. **Branch from Master/Main:** Create the hotfix branch directly from the latest `master/main` branch since it addresses production issues.
+  2. **Branch Version:** Name the branch with the version of `master/main` it targets to clearly identify the version being fixed.
+  3. **Merge Back to Master/Main:** After applying the fix, merge the hotfix branch directly into `master/main`.
+ 
+- **Example Command:**
+  ```bash
+  git checkout master
+  git pull origin master
+  git checkout -b hotfix/fix-payment-gateway-v2.0.2
+  ```
+</details>
 
 <details>
 <summary><h2>2. Branch Merging 🔀</h2></summary>
