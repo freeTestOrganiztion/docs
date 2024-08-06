@@ -191,7 +191,7 @@
   - Resolved session timeout issue
   ```
 
-  ## 2.4 Merging Master/Main into Develop 🔄
+## 2.4 Merging Master/Main into Develop 🔄
 
 - **Purpose:** Keep `develop` in sync! Bring the latest updates from `master/main` into the `develop` branch.
 - **Merge Commit Comment Format:**
