@@ -241,6 +241,7 @@
   2. **Merge Hotfix Branch:** Integrate changes from the hotfix branch into `master/main`.
   3. **Push Changes:** Update the remote `master/main` branch.
   4. **Create Tag and Release**: Tag the release version and push changes.
+  5. **Sync to Develop**: Sync the latest `master/main` to the latest `develop` branch.
 - **Merge Commands:**
   ```bash
   git checkout master
