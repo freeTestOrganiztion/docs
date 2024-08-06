@@ -77,7 +77,7 @@ develop -> 2.0.1-dev-1.1.0
 - **Starting Point:** `master/main` at version `2.0.0`.
 - **Development Stage:** `develop` at `2.0.0-dev-0.0.0`, with feature and bug branches.
 - **Updates:** `develop` progresses to `2.0.0-dev-1.1.0` as changes are integrated.
-- **Hotfix:** `hotfix/fix-payment-gateway-v2.0.1` is created to address a critical issue and is merged back into `master/main` as `2.0.1`.
+- **Hotfix:** `hotfix/fix-payment-gateway-v2.0.0` is created to address a critical issue and is merged back into `master/main` as `2.0.1`.
 - **Final State:** `master/main` is updated to `2.0.1`, and `develop` is aligned to `2.0.1-dev-1.1.0` for further development.
 This structure ensures smooth integration of new features, bug fixes, and urgent hotfixes, leading to stable releases and timely resolution of critical issues.
 </details>
