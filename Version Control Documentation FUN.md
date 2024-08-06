@@ -395,6 +395,10 @@ This section outlines the workflow for managing branches and handling version up
   - Ensure the version number of feature and bug branches aligns with the `master/main` version they target.
     - **Example:** If `master/main` is at `2.0.2`, a feature branch should be named `feature/feature-name-v2.0.2`.
 
+- **Hotfixes:**
+  - Ensure the version number of hotfix branches aligns with the `master/main` version they target.
+    - **Example:** If `master/main` is at `2.0.2`, a hotfix branch should be named `hotfix/hotfix-name-v2.0.2`.
+
 - **Develop Branch Versions:**
   - The `develop` branch should include an additional suffix to indicate its development status (e.g., `2.0.2-dev-1.1.1`).
   - Update the `develop` version as new features or bug fixes are integrated, reflecting the current state of development.
@@ -402,28 +406,6 @@ This section outlines the workflow for managing branches and handling version up
 - **Release Management:**
   - Each release from `master/main` should be tagged and documented comprehensively.
   - Maintain a clear history of changes and version increments to facilitate potential rollbacks.
-
-## Example Workflow
-
-### Workflow Examples
-
-**Here’s how you might follow the workflow:**
-
-- **Create Feature Branch:**
-  - **Branch Name:** `feature/new-dashboard-v2.0.2`
-  - **Description:** Develop a new dashboard feature for `master/main` version `2.0.2`.
-
-- **Merge Feature Branch:**
-  - After merging `feature/new-dashboard-v2.0.2` into `develop`, update `develop` to `2.0.2-dev-1.0.0` if this is the first feature branch merged.
-
-- **Prepare for Release:**
-  - Ensure `develop` is stable and incorporates all planned features and fixes.
-
-- **Merge into Master/Main:**
-  - **Tag Version:** `v2.1.0` if significant new features were included.
-  - **Release:** Document changes and deploy the new version.
-
-These examples illustrate how to manage branches, integrate changes, and prepare for releases effectively.
 
 </details>
 
