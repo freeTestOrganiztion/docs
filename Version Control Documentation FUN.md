@@ -42,6 +42,12 @@ Here’s a clear guide to understanding our branching strategy. This section out
   - **Update Rules:** 
     - **Versioning:** These branches inherit their version from the `develop` branch but do not have their own version numbers.
 
+- **🚑 Hotfix Branches:**
+  - **Purpose:** These branches are used for urgent fixes to issues in the production environment. They are created directly from `master/main` and are intended to address critical problems that need immediate resolution.
+  - **Naming Convention:** `hotfix/hotfix-description-vX.Y.Z`
+  - **Update Rules:** 
+    - **Versioning:** These branches follow the same versioning rules as bug branches, inheriting from the current version of `master/main`.
+  
 ### Example Branch Structure
 
 Here’s an example of how our branches might evolve:
@@ -60,12 +66,20 @@ bug/fix-login-error-v2.0.0
 develop -> 2.0.0-dev-1.1.0
       |
       v
-master/main -> 2.1.0
+hotfix/fix-payment-gateway-v2.0.0
+      |
+      v
+master/main -> 2.0.1
+      |
+      v
+develop -> 2.0.1-dev-0.0.0
 ```
 - **Starting Point:** `master/main` at version `2.0.0`.
 - **Development Stage:** `develop` at `2.0.0-dev-0.0.0`, with feature and bug branches.
-- **Updates:** `develop` progresses to `2.0.0-dev-1.1.0` as changes are integrated, and `master/main` is updated to `2.1.0`.
-This structure ensures smooth integration of new features and bug fixes, leading to stable releases.
+- **Updates:** `develop` progresses to `2.0.0-dev-1.1.0` as changes are integrated.
+- **Hotfix:** `hotfix/fix-payment-gateway-v2.0.1` is created to address a critical issue and is merged back into `master/main` as `2.0.1`.
+- **Final State:** `master/main` is updated to `2.0.1`, and `develop` is aligned to `2.0.1-dev-1.1.0` for further development.
+This structure ensures smooth integration of new features, bug fixes, and urgent hotfixes, leading to stable releases and timely resolution of critical issues.
 </details>
 
 <details>
