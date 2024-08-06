@@ -285,16 +285,16 @@ These examples illustrate how hotfix branches are used to quickly address urgent
 
 This section outlines the workflow for managing branches and handling version updates. Following these steps ensures a smooth development process and consistent releases.
 
-## 5.1 Workflow
+## 6.1 Feature and Bug Branch Workflow
 
-### Workflow Overview
+### Feature and Bug Branch Workflow Overview
 
 **Steps for Managing Your Code:**
 
 - **Create Branches:**
   - **Feature Branches:** Created from the `develop` branch for new features.
   - **Bug Branches:** Created from the `develop` branch for bug fixes.
-  - **Naming Convention:** Include the version of the `master/main` branch the branch targets (e.g., `feature/new-dashboard-v2.0.2`).
+  - **Naming Convention:** Include the version of the `master/main` branch the branch targets (e.g., `feature/new-dashboard-v2.0.2`, `bug/fix-login-error-v2.0.2`).
 
 - **Develop Code:**
   - Work on the feature or bug fix in the respective branch.
@@ -316,7 +316,76 @@ This section outlines the workflow for managing branches and handling version up
   - Tag the release on the `master/main` branch with the updated version number.
   - Create detailed release notes including changes, compatibility, and deployment information.
 
-## 5.2 Versioning and Version Control Handling
+### Example Workflow for Feature and Bug Branches
+
+**Here’s how you might follow the workflow:**
+
+- **Create Feature Branch:**
+  - **Branch Name:** `feature/new-dashboard-v2.0.2`
+  - **Description:** Develop a new dashboard feature for `master/main` version `2.0.2`.
+ 
+- **Create Bug Branch:**
+  - **Branch Name:** `bug/fix-login-error-v2.0.2`
+  - **Description:** Fix a login error in `master/main` version `2.0.2`.
+
+- **Merge Feature Branch:**
+  - After merging `feature/new-dashboard-v2.0.2` into `develop`, update `develop` to `2.0.2-dev-1.0.0` if this is the first feature branch merged.
+
+- **Merge Bug Branch:**
+  - After merging `bug/fix-login-error-v2.0.2` into `develop`, update `develop` to `2.0.2-dev-1.1.0` if this is the first bug fix branch merged.
+
+- **Prepare for Release:**
+  - Ensure `develop` is stable and incorporates all planned features and fixes.
+
+- **Merge into Master/Main:**
+  - **Tag Version:** `v2.1.0` if significant new features were included.
+  - **Release:** Document changes and deploy the new version.
+ 
+## 6.2 Hotfix Branch Workflow
+
+### Hotfix Branch Workflow Overview
+
+**Steps for Managing Hotfixes:**
+
+- **Create Hotfix Branches:**
+  - Created directly from the `master/main` branch to address urgent issues in production.
+  - **Naming Convention:** Include the version of the `master/main` branch created from (e.g., `hotfix/fix-payment-gateway-v2.0.1`).
+
+- **Develop Hotfix:**
+  - Work on the hotfix in the hotfix branch.
+  - Ensure the fix addresses the issue and perform thorough testing.
+
+- **Merge to Master/Main:**
+  - After successful testing, merge the hotfix branch directly into the master/main branch.
+  - **Version Increment:** Increment the `master/main` version (usually as a PATCH) to reflect the hotfix.
+
+- **Sync Develop Branch:**
+  - Merge `master/main` branch with `develop` branch to sync it.
+
+- **Tag and Release:**
+  - Tag the release on the `master/main` branch with the updated version number.
+  - Create detailed release notes including changes, compatibility, and deployment information.
+
+### Example Workflow for Hotfix Branches
+
+**Here’s how you might follow the workflow:**
+
+- **Create Hotfix Branch:**
+  - **Branch Name:** `hotfix/critical-bug-v2.0.1`
+  - **Description:** Fix a critical issue in `master/main` version `2.0.1`.
+ 
+- **Merge Hotfix Branch:**
+  - After completing and testing `hotfix/critical-bug-v2.0.1`, merge it into `master/main` and update `master/main` to `2.0.2`.
+  - Sync the `master/main` branch into `develop` to include the fix in ongoing development.
+
+- **Prepare for Release:**
+  - Ensure `master/main` is stable and incorporates all planned features and fixes.
+
+- **Merge into Master/Main:**
+  - **Tag Version:** `v2.0.2` if the hotfix was critical.
+  - **Release:** Document changes and deploy the new version.
+
+## 6.3 Versioning and Version Control Handling
 
 ### Versioning and Control Guidelines
 
